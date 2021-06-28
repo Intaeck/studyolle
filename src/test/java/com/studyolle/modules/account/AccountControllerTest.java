@@ -84,7 +84,8 @@ class AccountControllerTest extends ContainerBaseTest {
                 .with(csrf()))
                 .andExpect(status().isOk())
                 .andExpect(view().name("account/sign-up"))
-                .andExpect(unauthenticated());
+                .andExpect(unauthenticated())
+                .andExpect(model().attributeHasFieldErrors("signUpForm", "email"));
     }
 
     @DisplayName("회원 가입 처리 - 입력값 정상")
