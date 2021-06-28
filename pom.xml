@@ -16,6 +16,7 @@
 
     <properties>
         <java.version>11</java.version>
+        <maven-resources-plugin.version>3.1.0</maven-resources-plugin.version>
     </properties>
 
     <dependencies>
